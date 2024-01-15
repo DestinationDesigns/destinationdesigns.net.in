@@ -1,0 +1,9 @@
+.header {
+  position: fixed;
+  left: 4rem;
+  top: 1.5rem;
+}
+
+.header img {
+  max-width: 12vw;
+}

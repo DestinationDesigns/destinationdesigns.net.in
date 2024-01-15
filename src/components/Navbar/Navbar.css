@@ -1,0 +1,70 @@
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+}
+
+.navbar {
+  width: 20%;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to right, #01579b00, #01579b4d);
+}
+
+.toggle-button {
+  background-color: #00000000;
+  border-radius: 36px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+  position: fixed;
+  top: 2em;
+  right: 3em;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: right;
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+.navbar-item {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.75em;
+  transition: text-decoration 0.3s ease;
+}
+
+.navbar-item a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.navbar.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.navbar.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  user-select: none;
+}
