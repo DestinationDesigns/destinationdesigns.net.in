@@ -20,6 +20,7 @@ export async function GET() {
 				group: 1,
 				featured: 1,
 				vindex: 1,
+				images: { $slice: 1 },
 			})
 			.toArray();
 		return NextResponse.json(projects);
