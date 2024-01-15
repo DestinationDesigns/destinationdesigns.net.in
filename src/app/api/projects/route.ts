@@ -11,7 +11,6 @@ export async function GET() {
 			.collection("Project")
 			.find({})
 			.sort({
-				class: 1,
 				vindex: 1,
 				_id: 1,
 			})
