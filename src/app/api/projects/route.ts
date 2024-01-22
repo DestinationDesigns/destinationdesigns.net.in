@@ -8,7 +8,7 @@ export async function GET() {
 		const client = await connectMongoDB();
 		const db = client.db("DestinationDesigns");
 		const projects = await db
-			.collection("Project")
+			.collection("Projects")
 			.find({})
 			.sort({
 				vindex: 1,

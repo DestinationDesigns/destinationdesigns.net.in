@@ -1,0 +1,50 @@
+.selector-section {
+	background: white;
+	padding-top: 5rem;
+	color: black;
+}
+.selector-section h1 {
+	color: #01579b;
+	padding-left: 4rem;
+}
+.menu-selector {
+	display: flex;
+	padding: 0 4rem;
+	justify-content: space-between;
+}
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+	gap: 2px;
+	padding: 0;
+	height: auto;
+	width: 100%;
+	background: white;
+}
+.selector {
+	display: flex;
+}
+.selector.class h3 {
+	padding: 0 10px 0 0;
+}
+.selector.type h3 {
+	padding: 0 0 0 10px;
+}
+
+.image-container-grid {
+	position: relative;
+	width: 100%;
+	padding-bottom: 60%;
+	overflow: hidden;
+}
+
+.image-container-grid img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-container-grid:hover img {
+	transform: scale(1.1);
+	transition: 0.3s all ease-in-out;
+}

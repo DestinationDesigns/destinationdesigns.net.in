@@ -9,7 +9,7 @@ export async function GET(req, { params }) {
 		const client = await connectMongoDB();
 		const db = client.db("DestinationDesigns");
 		const project = await db
-			.collection("Project")
+			.collection("Projects")
 			.findOne({ _id: new ObjectId(id) });
 		return NextResponse.json(project);
 	} catch (err) {

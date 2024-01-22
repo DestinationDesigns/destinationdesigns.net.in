@@ -1,3 +1,44 @@
-.image-grid > img {
+.image {
+	position: relative;
 	width: 100vw;
+	height: 100vh;
+	margin: 0 0 0.25rem;
+}
+
+.floating-text {
+	position: absolute;
+	bottom: 3em;
+	left: 3em;
+	color: #fff;
+}
+.floating-text > h1 {
+	margin: 0;
+}
+.floating-text > p {
+	margin: 0;
+	font-size: 14px;
+}
+
+.project-details {
+	font-size: 16px;
+	padding-top: 2rem;
+	background-color: #1e1e1e;
+}
+.project-details h3 {
+	font-size: 14px;
+}
+.project-details hr {
+	font-size: 14px;
+	width: 50%;
+}
+.detail-section {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 25vw;
+}
+
+.redirect-section {
+	display: flex;
+	justify-content: space-around;
+	/* TODO  text decoration */
 }
