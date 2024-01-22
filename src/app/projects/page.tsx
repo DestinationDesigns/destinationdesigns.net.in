@@ -41,6 +41,7 @@ function Projects() {
 	// 	setSelectedType(typeKey);
 	// };
 
+	console.log(data);
 	return (
 		<>
 			<div className="selector-section">
