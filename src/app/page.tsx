@@ -1,14 +1,13 @@
-import Image from "next/image"
+import Image from "next/image";
 import React from "react";
-import Slider from "../components/Slider/Slider";
-import Header from "../components/Header/Header";
-import Navbar from "../components/Navbar/Navbar";
+import Slider from "@/components/Slider";
+import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import "./Home.css";
 
 import arch_exp from "../../public/assets/architecture-exp.png";
 import intr_exp from "../../public/assets/interior-exp.png";
 import plng_exp from "../../public/assets/planning-exp.png";
-
 
 function Home() {
 	return (
@@ -18,7 +17,8 @@ function Home() {
 				<span className="caption">
 					At Destination, we believe quality is never an accident.
 					<br />
-					It is always the result of high intentions, sincere efforts and
+					It is always the result of high intentions, sincere efforts
+					and
 					<br />
 					skillful execution in search of Excellence...
 				</span>
@@ -35,37 +35,55 @@ function Home() {
 							<tr>
 								<td>
 									<div className="expertise-img-container">
-										<Image src={arch_exp} alt="" className="expertise-img" />
+										<Image
+											src={arch_exp}
+											alt=""
+											className="expertise-img"
+										/>
 										<div className="expertise-overlay">
 											<h3>ARCHITECTURE</h3>
 											<p className="overlay-desc">
-												We are passionate about responsible design and the
-												impact it has on the lives we touch every day.
+												We are passionate about
+												responsible design and the
+												impact it has on the lives we
+												touch every day.
 											</p>
 										</div>
 									</div>
 								</td>
 								<td>
 									<div className="expertise-img-container">
-										<Image src={intr_exp} alt="" className="expertise-img" />
+										<Image
+											src={intr_exp}
+											alt=""
+											className="expertise-img"
+										/>
 										<div className="expertise-overlay">
 											<h3>INTERIOR DESIGN</h3>
 											<p className="overlay-desc">
-												We create functional interior design solutions which
-												address the needs & requirements of our client.
+												We create functional interior
+												design solutions which address
+												the needs & requirements of our
+												client.
 											</p>
 										</div>
 									</div>
 								</td>
 								<td>
 									<div className="expertise-img-container">
-										<Image src={plng_exp} alt="" className="expertise-img" />
+										<Image
+											src={plng_exp}
+											alt=""
+											className="expertise-img"
+										/>
 										<div className="expertise-overlay">
 											<h3>PLANNING</h3>
 											<p className="overlay-desc">
-												We are committed to delivering environmental and
-												socially sustainable communities with a strong sense of
-												design value on an urban level.
+												We are committed to delivering
+												environmental and socially
+												sustainable communities with a
+												strong sense of design value on
+												an urban level.
 											</p>
 										</div>
 									</div>

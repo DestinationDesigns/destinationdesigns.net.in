@@ -1,11 +1,11 @@
 import React from "react";
-import Link from "next/link"
-import Image from "next/image"
+import Link from "next/link";
+import Image from "next/image";
 import "./Footer.css";
 
-import logo_white from "../../../public/assets/main_logo_white.png";
-import instagram_logo from "../../../public/assets/instagram_logo.png";
-import linkedin_logo from "../../../public/assets/linkedin_logo.png";
+import main_logo_white from "../../public/assets/main_logo_white.png";
+import instagram_logo from "../../public/assets/instagram_logo.png";
+import linkedin_logo from "../../public/assets/linkedin_logo.png";
 
 function Footer() {
 	return (
@@ -13,7 +13,12 @@ function Footer() {
 			<div className="footer-container">
 				<div className="footer-section">
 					<Link href="/">
-						<Image src={logo_white} alt="Main Logo" className="mainlogo" />
+						<Image
+							src={main_logo_white}
+							fill
+							alt="Main Logo"
+							className="mainlogo"
+						/>
 					</Link>
 				</div>
 				<div className="footer-section">

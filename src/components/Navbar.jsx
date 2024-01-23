@@ -1,15 +1,16 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
+
 import "./Navbar.css";
 
-import logoOpenLight from "../../../public/assets/menuopen_logo_white.png";
-import logoOpenDark from "../../../public/assets/menuopen_logo_black.png";
-import logoClosed from "../../../public/assets/menuclose_logo.png";
+import menuopen_logo_black from "../../public/assets/menuopen_logo_white.png";
+import menuopen_logo_white from "../../public/assets/menuopen_logo_white.png";
+import menuclose_logo from "../../public/assets/menuclose_logo.png";
 
 function Navbar({ dark }) {
-	const logoOpen = dark ? logoOpenDark : logoOpenLight;
+	const logoOpen = dark ? menuopen_logo_black : menuopen_logo_white;
 	const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
 	const toggleNavbar = () => {
@@ -48,7 +49,7 @@ function Navbar({ dark }) {
 			<button className="toggle-button" onClick={toggleNavbar}>
 				<Image
 					className="logo"
-					src={isNavbarVisible ? logoClosed : logoOpen}
+					src={isNavbarVisible ? menuclose_logo : logoOpen}
 					alt="Logo"
 				/>
 			</button>

@@ -1,13 +1,13 @@
-"use client"
-import Image from "next/image"
+"use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import "./Slider.css";
 
-import img1 from "../../../public/assets/slides/AQUA.jpg";
-import img2 from "../../../public/assets/slides/CASAGRAND MERIDIAN.jpg";
-import img3 from "../../../public/assets/slides/CASAGRAND ORLENA.jpg";
-import img4 from "../../../public/assets/slides/NAVACHETANA HOSPITAL.jpg";
-import img5 from "../../../public/assets/slides/SPECTRUM.jpg";
+import img1 from "../../public/assets/slides/AQUA.jpg";
+import img2 from "../../public/assets/slides/CASAGRAND MERIDIAN.jpg";
+import img3 from "../../public/assets/slides/CASAGRAND ORLENA.jpg";
+import img4 from "../../public/assets/slides/NAVACHETANA HOSPITAL.jpg";
+import img5 from "../../public/assets/slides/SPECTRUM.jpg";
 
 const data = [
 	{ src: img3, title: "CASAGRAND ORLENA" },
@@ -25,11 +25,15 @@ function Slider() {
 	let intervalTime = 5000;
 
 	const nextSlide = () => {
-		setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
+		setCurrentSlide(
+			currentSlide === slideLength - 1 ? 0 : currentSlide + 1,
+		);
 	};
 
 	const prevSlide = () => {
-		setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
+		setCurrentSlide(
+			currentSlide === 0 ? slideLength - 1 : currentSlide - 1,
+		);
 	};
 
 	function auto() {
@@ -52,11 +56,17 @@ function Slider() {
 			{data.map((slide, index) => {
 				return (
 					<div
-						className={index === currentSlide ? "slide current" : "slide"}
+						className={
+							index === currentSlide ? "slide current" : "slide"
+						}
 						key={index}
 					>
 						<div>
-							<Image src={slide.src} alt="slide" className="image" />
+							<Image
+								src={slide.src}
+								alt="slide"
+								className="image"
+							/>
 							<h1>{slide.title}</h1>
 						</div>
 					</div>
@@ -67,7 +77,9 @@ function Slider() {
 				{data.map((_, index) => (
 					<span
 						key={index}
-						className={index === currentSlide ? "dot active" : "dot"}
+						className={
+							index === currentSlide ? "dot active" : "dot"
+						}
 						onClick={() => setCurrentSlide(index)}
 					></span>
 				))}

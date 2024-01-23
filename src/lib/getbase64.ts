@@ -1,8 +1,9 @@
 import { getPlaiceholder } from "plaiceholder";
+import Loader from "./loader";
 
 export default async function getBase64(imageUrl: string) {
 	try {
-		const res = await fetch(imageUrl);
+		const res = await fetch(Loader({ src: imageUrl, width: 640 }));
 
 		if (!res.ok) {
 			throw new Error(
@@ -13,8 +14,6 @@ export default async function getBase64(imageUrl: string) {
 		const buffer = await res.arrayBuffer();
 
 		const { base64 } = await getPlaiceholder(Buffer.from(buffer));
-
-		//console.log(`base64: ${base64}`)
 
 		return base64;
 	} catch (e) {
