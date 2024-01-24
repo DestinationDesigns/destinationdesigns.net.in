@@ -1,18 +1,34 @@
 import Image from "next/image";
 import React from "react";
+
+import getBase64 from "@/lib/getbase64";
+
 import Slider from "@/components/Slider";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
+
 import "./Home.css";
 
 import arch_exp from "../../public/assets/architecture-exp.png";
 import intr_exp from "../../public/assets/interior-exp.png";
 import plng_exp from "../../public/assets/planning-exp.png";
 
-function Home() {
+async function getData() {
+	const res = await fetch("http://localhost:3000/api/slides");
+	if (!res.ok) throw new Error("Failed to fetch data");
+	return res.json();
+}
+
+async function Home() {
+	const data = await getData();
+	const base64Promises = data.map((project) => getBase64(project.images[0]));
+	const base64Result = await Promise.all(base64Promises);
+	data.forEach((project, index) => {
+		project.images[1] = base64Result[index];
+	});
 	return (
 		<>
-			<Slider />
+			<Slider data={data} />
 			<div className="home-container">
 				<span className="caption">
 					At Destination, we believe quality is never an accident.

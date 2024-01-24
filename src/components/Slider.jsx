@@ -1,22 +1,11 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
+import Loader from "@/lib/loader";
 import "./Slider.css";
 
-import img1 from "../../public/assets/slides/AQUA.jpg";
-import img2 from "../../public/assets/slides/CASAGRAND MERIDIAN.jpg";
-import img3 from "../../public/assets/slides/CASAGRAND ORLENA.jpg";
-import img4 from "../../public/assets/slides/NAVACHETANA HOSPITAL.jpg";
-import img5 from "../../public/assets/slides/SPECTRUM.jpg";
-
-const data = [
-	{ src: img3, title: "CASAGRAND ORLENA" },
-	{ src: img2, title: "CASAGRAND MERIDIAN" },
-	{ src: img1, title: "AQUA" },
-	{ src: img4, title: "NAVACHETANA HOSPITAL" },
-	{ src: img5, title: "SPECTRUM" },
-];
-function Slider() {
+function Slider({ data }) {
 	const [currentSlide, setCurrentSlide] = useState(0);
 	const slideLength = data.length;
 
@@ -61,14 +50,17 @@ function Slider() {
 						}
 						key={index}
 					>
-						<div>
+						<Link href={`/project/${slide._id}`}>
 							<Image
-								src={slide.src}
-								alt="slide"
-								className="image"
+								loader={Loader}
+								src={slide.images[0]}
+								fill
+								placeholder="blur"
+								blurDataURL={slide.images[1]}
+								alt="slides"
 							/>
-							<h1>{slide.title}</h1>
-						</div>
+						</Link>
+						<h1>{slide.name}</h1>
 					</div>
 				);
 			})}

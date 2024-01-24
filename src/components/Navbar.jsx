@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import "./Navbar.css";
 
-import menuopen_logo_black from "../../public/assets/menuopen_logo_white.png";
+import menuopen_logo_black from "../../public/assets/menuopen_logo_black.png";
 import menuopen_logo_white from "../../public/assets/menuopen_logo_white.png";
 import menuclose_logo from "../../public/assets/menuclose_logo.png";
 

@@ -20,8 +20,8 @@ async function ProjectsPage() {
 	return (
 		<>
 			<Projects data={data} />
-			<Header dark={false} />
-			<Navbar dark={false} />
+			<Header dark={true} />
+			<Navbar dark={true} />
 		</>
 	);
 }

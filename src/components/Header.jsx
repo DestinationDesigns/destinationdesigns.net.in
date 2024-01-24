@@ -9,7 +9,7 @@ function Header({ dark }) {
 	return (
 		<div className="header">
 			<Link href="/">
-				<Image src={dark ? main_logo_white : main_logo_black} alt="" />
+				<Image src={dark ? main_logo_black : main_logo_white} alt="" />
 			</Link>
 		</div>
 	);
