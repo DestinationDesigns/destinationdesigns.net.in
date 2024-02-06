@@ -40,8 +40,9 @@ footer {
 }
 
 .mainlogo {
-	max-width: 14vw;
+	max-width: 12rem;
 	object-fit: contain;
+	height: auto;
 	margin-top: 2rem;
 	margin-right: 2rem;
 }

@@ -5,11 +5,11 @@
 }
 .selector-section h1 {
 	color: #01579b;
-	padding-left: 4rem;
+	padding-left: 5rem;
 }
 .menu-selector {
 	display: flex;
-	padding: 0 4rem;
+	padding: 0 5rem;
 	justify-content: space-between;
 }
 .image-grid {
