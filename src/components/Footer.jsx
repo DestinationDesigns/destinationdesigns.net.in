@@ -15,7 +15,6 @@ function Footer() {
 					<Link href="/">
 						<Image
 							src={main_logo_white}
-							fill
 							alt="Main Logo"
 							className="mainlogo"
 						/>

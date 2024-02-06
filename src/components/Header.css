@@ -1,9 +1,10 @@
 .header {
-  position: fixed;
-  left: 4rem;
-  top: 1.5rem;
+	position: fixed;
+	left: 4rem;
+	top: 1.5rem;
 }
 
 .header img {
-  max-width: 12vw;
+	max-width: 14vw;
+	object-fit: contain;
 }
