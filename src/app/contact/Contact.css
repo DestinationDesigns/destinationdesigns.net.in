@@ -1,49 +1,49 @@
-#entire-career {
+#entire-contact {
 	margin: 0;
 	background-color: white;
 	padding-left: 16vw;
 	padding-right: 16vw;
 	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-bottom: 3rem;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 }
 
-#careers-heading {
+#contact-heading {
 	color: #01579b;
+	width: 100%;
 }
 
-#career-paragraph {
-	color: #505050;
-	margin-top: 3rem;
-}
-
-.career-flex {
+.contact-flex {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 5rem;
 }
-.career-role h2 {
+
+.contact-info {
+	margin-right: 10rem;
+}
+.contact-form {
+	margin-left: 3rem;
+}
+.contact-info h2 {
+	margin-top: 3rem;
 	color: black;
+	font-size: 1.25rem;
 }
 
-.career-roles {
-	font-family: "Rubik", sans-serif;
-	font-weight: 500;
-	font-size: 1.1rem;
+.contact-info p {
 	color: #505050;
-	margin-top: 2rem;
+	font-size: 1rem;
 }
 
-#below-roles {
+.contact-form p {
 	color: #505050;
-	font-size: 0.9rem;
-	margin-top: 4rem;
+	font-size: 1rem;
 }
 
-.career-form {
-	width: 30vw;
+.contact-form {
+	width: 40vw;
 }
 
 #form-input {
@@ -61,29 +61,29 @@
 	border: 0px;
 	color: #505050;
 }
-
-#attach-flex {
-	display: flex;
-	justify-content: space-between;
-}
-.attach-button {
-	color: #505050;
-	font-size: 0.8rem;
+.form-textarea {
 	width: 100%;
+	border-radius: 5px;
+	font-family: "Baloo 2", sans-serif;
+	font-size: 0.9rem;
 	margin: 0.5rem 0.3rem;
+	background-color: #d9d9d980;
+	border: 0px;
+	color: #505050;
 }
 
-.form-attach-button {
-	width: 100%;
-	height: 3.5rem;
+.contact-button {
+	width: 10rem;
+	height: 3rem;
+	font-size: 1rem;
 	border-radius: 5px;
 	border-color: #01579b;
 	background-color: white;
 	color: #01579b;
 }
 
-.form-apply {
-	margin: 3rem 0;
+#submit-button {
+	margin: 0.5rem 0.2rem;
 	width: 100%;
 	height: 3rem;
 	border-radius: 5px;
@@ -91,9 +91,9 @@
 	color: white;
 	border: 0px;
 	font-family: "Rubik", sans-serif;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
-
-#form-dropdown {
-	opacity: 80%;
+.map {
+	width: 100vw;
+	height: 400px;
 }
