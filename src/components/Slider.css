@@ -70,7 +70,9 @@
 
 @media (max-width: 768px) {
 	.slider {
-		height: 30vh;
+		width: 100vw;
+		height: 33.33vh;
+		object-position: 50% 50%;
 	}
 	.slider h1 {
 		font-size: 1rem;
@@ -79,5 +81,8 @@
 	}
 	.dot {
 		display: none;
+	}
+	.slider img {
+		object-fit: cover;
 	}
 }

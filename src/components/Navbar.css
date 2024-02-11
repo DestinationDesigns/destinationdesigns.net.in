@@ -7,7 +7,7 @@
 
 .navbar {
 	width: 20%;
-	padding: 1.5em;
+	padding: 1.5rem 0;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -15,12 +15,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	background: linear-gradient(to right, #01579b00, #01579b4d);
+	background: linear-gradient(to right, #01579b00, #01579b8d);
 }
 
 .toggle-button {
 	background-color: #00000000;
-	border-radius: 36px;
+	border-radius: 1.5rem;
 	color: white;
 	border: none;
 	cursor: pointer;
@@ -36,19 +36,13 @@
 	text-align: right;
 	line-height: 1;
 	font-family: "Rubik", sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 }
-
-.navbar-item {
-	margin: 0;
-	padding: 0;
-}
-
 .navbar-item a {
 	color: white;
 	text-decoration: none;
 	display: block;
-	padding: 0.75em;
+	padding: 1rem 3rem;
 	transition: text-decoration 0.3s ease;
 }
 
@@ -69,9 +63,24 @@
 	user-select: none;
 }
 
+.logo {
+	width: 2.5rem;
+	object-fit: contain;
+}
 @media (max-width: 768px) {
 	.toggle-button {
 		top: 0.5rem;
 		right: 0.5rem;
+	}
+	.logo {
+		width: 1.8rem;
+		object-fit: contain;
+	}
+	.navbar {
+		width: 50%;
+	}
+	.navbar-item a {
+		padding-right: 1.5rem;
+		font-size: 0.9rem;
 	}
 }

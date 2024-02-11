@@ -10,7 +10,7 @@ import linkedin_logo from "../../public/assets/linkedin_logo.png";
 function Footer() {
 	return (
 		<footer>
-			<div className="footer-container">
+			<div className="footer-container" id="info-container">
 				<div className="footer-section">
 					<Link href="/">
 						<Image
@@ -27,7 +27,7 @@ function Footer() {
 					<p>DESTINATIONDESIGNS.NET.IN</p>
 					<p>INFO@DESTINATIONDESIGNS.NET.IN</p>
 				</div>
-				<div className="footer-section">
+				<div className="footer-section" id="footer-redirect">
 					<h3 className="section-header">
 						<hr className="section-hr" /> STUDIO
 					</h3>

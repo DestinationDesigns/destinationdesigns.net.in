@@ -10,7 +10,8 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	max-width: 64vw;
+	flex-wrap: wrap;
+	max-width: 80rem;
 	margin: 0 auto;
 }
 
@@ -72,26 +73,24 @@ footer {
 	color: #d8d8d8;
 }
 
-[class*="col-"] {
-	.footer-container {
-		flex-direction: column;
-	}
-}
-
 @media (max-width: 768px) {
-	.mainlogo {
-		display: none;
-	}
-	.footer-container {
-		flex-direction: column;
-	}
 	.footer-section {
 		padding-bottom: 2rem;
+		margin: 0 1rem;
 	}
 	.section-header {
 		font-size: 0.9rem;
 	}
 	.footer-section p {
 		font-size: 0.8rem;
+	}
+	.mainlogo {
+		display: none;
+	}
+	#info-container {
+		justify-content: center;
+	}
+	#footer-redirect {
+		display: none;
 	}
 }

@@ -14,6 +14,7 @@
 
 .floating-text > h1 {
 	margin: 0;
+	font-size: 1.5rem;
 }
 
 .floating-text > p {
@@ -63,7 +64,7 @@
 		color: #fff;
 	}
 	.floating-text > h1 {
-		font-size: 1.25rem;
+		font-size: 1rem;
 	}
 
 	.floating-text > p {

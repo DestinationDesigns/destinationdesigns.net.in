@@ -6,7 +6,7 @@
 .selector-section h1 {
 	color: #01579b;
 	padding-left: 5rem;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 }
 .menu-selector {
 	display: flex;
@@ -24,6 +24,7 @@
 }
 .selector {
 	display: flex;
+	font-size: 0.9rem;
 }
 
 .selector.class h3 {
@@ -61,19 +62,23 @@
 	}
 	.selector-section h1 {
 		padding-left: 1rem;
+		font-size: 1.25rem;
 	}
 	.selector.class h3 {
 		padding: 0 10px 0 0;
+		margin: 0;
 	}
 	.selector.type h3 {
 		padding: 0 10px 0 0;
+		margin-top: 0.3rem;
+		margin-bottom: 1.125rem;
 	}
 	.menu-selector {
 		padding: 0 1rem;
 		flex-direction: column;
 	}
 	.menu-selector h3 {
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 	}
 	.image-grid {
 		grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));

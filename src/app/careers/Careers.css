@@ -107,4 +107,24 @@
 	.career-form {
 		width: 80vw;
 	}
+	#entire-career {
+		padding-top: 3rem;
+	}
+	#careers-heading {
+		font-size: 0.75rem;
+	}
+	#career-paragraph {
+		margin-top: 1rem;
+		font-size: 0.8rem;
+	}
+	.career-flex {
+		margin-top: 1rem;
+	}
+	.career-role h2 {
+		font-size: 1rem;
+	}
+	.career-roles h3 {
+		margin-top: 0;
+		font-size: 0.8rem;
+	}
 }

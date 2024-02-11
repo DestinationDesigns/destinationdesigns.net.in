@@ -6,7 +6,10 @@
 	justify-content: center;
 	text-align: center;
 	margin: 0;
-	padding: 5rem 0 5rem 0;
+	padding: 5rem 0;
+}
+.caption {
+	font-size: 1.25rem;
 }
 
 .expertise-container {
@@ -60,7 +63,7 @@
 }
 
 .overlay-desc {
-	font-size: 16px;
+	font-size: 1rem;
 	position: absolute;
 	padding: 0 2rem 0 2rem;
 	opacity: 0;
@@ -69,6 +72,7 @@
 
 .expertise-title h2 {
 	color: #01579b;
+	font-size: 1.5rem;
 	margin-top: 3rem;
 	margin-bottom: 0.5rem;
 	align: left;
@@ -77,6 +81,34 @@
 
 @media (max-width: 768px) {
 	.expertise-container {
-		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.expertise-img-container {
+		margin: 0.25rem;
+		overflow: hidden;
+	}
+	.expertise-img {
+		width: 11rem;
+		height: 100%;
+		object-fit: cover;
+		transition: filter 0.3s ease-in-out;
+	}
+	.caption {
+		font-size: 0.9rem;
+		margin: 0 1rem;
+	}
+	.expertise-title h2 {
+		margin-top: 2rem;
+		font-size: 1.125rem;
+	}
+	.expertise-overlay h3 {
+		font-size: 0.9rem;
+	}
+	.expertise-overlay p {
+		font-size: 0.75rem;
+	}
+	.home-container {
+		padding-top: 3rem;
+		padding-bottom: 1.5rem;
 	}
 }

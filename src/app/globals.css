@@ -39,5 +39,10 @@ body {
 	margin: 0;
 }
 
-.container {
+input,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: transparent;
 }
