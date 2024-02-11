@@ -40,5 +40,12 @@
 .redirect-section {
 	display: flex;
 	justify-content: space-around;
-	/* TODO  text decoration */
+}
+
+.redirect-section a {
+	text-decoration: none;
+	color: white;
+}
+.redirect-section a:hover {
+	text-decoration: underline;
 }
