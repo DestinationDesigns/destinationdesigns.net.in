@@ -38,7 +38,7 @@ function Slider({ data }) {
 			auto();
 		}
 		return () => clearInterval(slideInterval);
-	}, [currentSlide, auto, autoScroll, slideInterval]);
+	}, [currentSlide, autoScroll, slideInterval]);
 
 	return (
 		<div className="slider">
