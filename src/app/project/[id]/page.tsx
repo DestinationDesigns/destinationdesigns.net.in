@@ -12,8 +12,10 @@ async function getData(projectID: string) {
 		const db = client.db("DestinationDesigns");
 		const project = await db
 			.collection("Projects")
-			.findOne({ _id: new ObjectId(projectID) });
-		project._id = project._id.toString();
+			.findOne(
+				{ _id: new ObjectId(projectID) },
+				{ projection: { _id: 0 } },
+			);
 		return project;
 	} catch (err) {
 		console.error("Failed to fetch data", err);
