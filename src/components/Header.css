@@ -9,3 +9,9 @@
 	object-fit: contain;
 	height: auto;
 }
+
+@media (max-width: 768px) {
+	.header img {
+		max-width: 11rem;
+	}
+}

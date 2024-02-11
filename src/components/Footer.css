@@ -24,12 +24,12 @@ footer {
 
 .footer-section p {
 	margin: 0;
-	font-size: 14px;
+	font-size: 0.875rem; /* Assuming base font size is 16px */
 }
 
 .footer-section ul {
 	list-style: none;
-	font-size: 14px;
+	font-size: 0.875rem; /* Assuming base font size is 16px */
 	padding: 0;
 	margin: 0;
 }
@@ -53,8 +53,9 @@ footer {
 
 .section-header {
 	white-space: nowrap;
-	font-size:;
+	font-size: 1rem; /* Assuming base font size is 16px */
 }
+
 .section-hr {
 	margin-right: 1rem;
 	display: inline-block;
@@ -63,10 +64,28 @@ footer {
 }
 
 .section-header {
-	font-size: 16px;
+	font-size: 1rem; /* Assuming base font size is 16px */
 }
 
 .cc {
-	font-size: 12px;
+	font-size: 0.75rem; /* Assuming base font size is 16px */
 	color: #d8d8d8;
+}
+
+[class*="col-"] {
+	.footer-container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 768px) {
+	.mainlogo {
+		display: none;
+	}
+	.footer-container {
+		flex-direction: column; /* Stack items vertically */
+	}
+	.footer-section {
+		padding-bottom: 2rem;
+	}
 }
