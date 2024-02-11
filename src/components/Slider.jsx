@@ -25,17 +25,13 @@ function Slider({ data }) {
 		);
 	};
 
-	function auto() {
-		slideInterval = setInterval(nextSlide, intervalTime);
-	}
-
 	useEffect(() => {
 		setCurrentSlide(0);
 	}, []);
 
 	useEffect(() => {
 		if (autoScroll) {
-			auto();
+			slideInterval = setInterval(nextSlide, intervalTime);
 		}
 		return () => clearInterval(slideInterval);
 	}, [currentSlide, autoScroll, slideInterval]);

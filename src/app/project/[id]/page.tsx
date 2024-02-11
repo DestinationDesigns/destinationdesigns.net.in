@@ -3,16 +3,32 @@ import Navbar from "@/components/Navbar";
 import Project from "./util";
 import getBase64 from "@/lib/getbase64";
 
+import connectMongoDB from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
+
 async function getData(projectID: string) {
-	const res = await fetch(`http://localhost:3000/api/project/${projectID}`);
-	if (!res.ok) throw new Error("Failed to fetch data");
-	return res.json();
+	try {
+		const client = await connectMongoDB();
+		const db = client.db("DestinationDesigns");
+		const project = await db
+			.collection("Projects")
+			.findOne({ _id: new ObjectId(projectID) });
+		project._id = project._id.toString();
+		return project;
+	} catch (err) {
+		console.error("Failed to fetch data", err);
+		return;
+	}
 }
 
 async function ProjectPage({ params }: { params: { id: string } }) {
 	const data = await getData(params.id);
-	const base64Promises = data.images.map((photo: any) => getBase64(photo));
-	data.blur = await Promise.all(base64Promises);
+	if (data) {
+		const base64Promises = data.images.map((photo: any) =>
+			getBase64(photo),
+		);
+		data.blur = await Promise.all(base64Promises);
+	}
 	return (
 		<>
 			<Project data={data} />
