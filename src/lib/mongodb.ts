@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
 
-const clusterUrl = process.env.CLUSTER_URL as string;
-const clientPEMFile = encodeURIComponent(process.env.PEMFILE_PATH as string);
-const authMechanism = "MONGODB-X509";
-const uri = `mongodb+srv://${clusterUrl}/?authMechanism=${authMechanism}&tls=true&tlsCertificateKeyFile=${clientPEMFile}&retryWrites=true&w=majority`;
+const clusterUrl = encodeURIComponent(process.env.CLUSTER_URL as string);
+const username = encodeURIComponent(process.env.USERNAME as string);
+const password = encodeURIComponent(process.env.PASSWORD as string);
+const uri = `mongodb+srv://${username}:${password}@${clusterUrl}/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri);
 
 let isConnected = false;

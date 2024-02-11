@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import Map from "@/components/Map";
+import Link from "next/link";
+// import Map from "@/components/Map";
 
 import "./Contact.css";
 
@@ -28,7 +29,12 @@ async function Contact() {
 								To submit your Resume please check our careers
 								page
 							</p>
-							<button className="contact-button">Career</button>
+
+							<Link href="/careers">
+								<button className="contact-button">
+									Career
+								</button>
+							</Link>
 						</div>
 						<div className="contact-form">
 							<p>
