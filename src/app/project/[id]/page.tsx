@@ -11,7 +11,7 @@ async function getData(projectID: string) {
 
 async function ProjectPage({ params }: { params: { id: string } }) {
 	const data = await getData(params.id);
-	const base64Promises = data.images.map((photo) => getBase64(photo));
+	const base64Promises = data.images.map((photo: any) => getBase64(photo));
 	data.blur = await Promise.all(base64Promises);
 	return (
 		<>

@@ -21,9 +21,11 @@ async function getData() {
 
 async function Home() {
 	const data = await getData();
-	const base64Promises = data.map((project) => getBase64(project.images[0]));
+	const base64Promises = data.map((project: any) =>
+		getBase64(project.images[0]),
+	);
 	const base64Result = await Promise.all(base64Promises);
-	data.forEach((project, index) => {
+	data.forEach((project: any, index: number) => {
 		project.images[1] = base64Result[index];
 	});
 	return (
