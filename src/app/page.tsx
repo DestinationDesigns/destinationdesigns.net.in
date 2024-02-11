@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import getBase64 from "@/lib/getbase64";
-import connectMongoDB from "@/lib/mongodb";
+import dbInstance from "@/lib/mongodb";
 
 import Slider from "@/components/Slider";
 import Header from "@/components/Header";
@@ -16,8 +16,7 @@ import plng_exp from "../../public/assets/planning-exp.png";
 
 async function getData() {
 	try {
-		const client = await connectMongoDB();
-		const db = client.db("DestinationDesigns");
+		const db = await dbInstance();
 		const projects = await db
 			.collection("Projects")
 			.find({ slides: { $exists: true } })

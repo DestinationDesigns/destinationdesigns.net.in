@@ -3,13 +3,12 @@ import Navbar from "@/components/Navbar";
 import Project from "./util";
 import getBase64 from "@/lib/getbase64";
 
-import connectMongoDB from "@/lib/mongodb";
+import dbInstance from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
 async function getData(projectID: string) {
 	try {
-		const client = await connectMongoDB();
-		const db = client.db("DestinationDesigns");
+		const db = await dbInstance();
 		const project = await db
 			.collection("Projects")
 			.findOne(

@@ -68,3 +68,10 @@
 	pointer-events: none;
 	user-select: none;
 }
+
+@media (max-width: 768px) {
+	.toggle-button {
+		top: 0.5rem;
+		right: 0.5rem;
+	}
+}

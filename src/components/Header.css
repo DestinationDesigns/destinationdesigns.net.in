@@ -14,4 +14,8 @@
 	.header img {
 		max-width: 11rem;
 	}
+	.header {
+		top: 1rem;
+		left: 1rem;
+	}
 }

@@ -12,7 +12,7 @@
 
 #contact-heading {
 	color: #01579b;
-	width: 100%;
+	font-size: 0.9rem;
 }
 
 .contact-flex {
@@ -96,4 +96,26 @@
 .map {
 	width: 100vw;
 	/* height: 400px; */
+}
+
+@media (max-width: 768px) {
+	.contact-flex {
+		flex-direction: column;
+	}
+	.contact-info {
+		margin-right: 0;
+	}
+	.contact-form {
+		margin-left: 0;
+	}
+	.contact-info {
+		margin-top: 0;
+	}
+	.contact-info h2 {
+		margin-top: 2rem;
+	}
+	.contact-form {
+		width: 80vw;
+		margin-top: 3rem;
+	}
 }

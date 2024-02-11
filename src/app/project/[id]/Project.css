@@ -2,35 +2,39 @@
 	position: relative;
 	height: 100vh;
 	object-fit: cover;
-	margin: 0 0 0.25rem;
+	margin: 0 0 0.15rem;
 }
 
 .floating-text {
 	position: absolute;
-	bottom: 3em;
-	left: 3em;
+	bottom: 3rem;
+	left: 5rem;
 	color: #fff;
 }
+
 .floating-text > h1 {
 	margin: 0;
 }
+
 .floating-text > p {
 	margin: 0;
-	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .project-details {
-	font-size: 16px;
-	padding-top: 2rem;
+	padding-top: 1.25rem;
 	background-color: #1e1e1e;
 }
+
 .project-details h3 {
-	font-size: 14px;
+	font-size: 0.875rem;
 }
+
 .project-details hr {
-	font-size: 14px;
+	font-size: 0.875rem;
 	width: 50%;
 }
+
 .detail-section {
 	display: flex;
 	justify-content: space-between;
@@ -46,6 +50,38 @@
 	text-decoration: none;
 	color: white;
 }
+
 .redirect-section a:hover {
 	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.floating-text {
+		position: absolute;
+		bottom: 1rem;
+		left: 1rem;
+		color: #fff;
+	}
+	.floating-text > h1 {
+		font-size: 1.25rem;
+	}
+
+	.floating-text > p {
+		font-size: 0.75rem;
+	}
+	.image {
+		height: 70vw;
+	}
+	.project-details hr {
+		font-size: 0.875rem;
+		width: 80%;
+	}
+	.detail-section {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 10vw;
+	}
+	.project-details h3 {
+		font-size: 0.6rem;
+	}
 }

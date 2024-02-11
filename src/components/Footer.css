@@ -24,12 +24,12 @@ footer {
 
 .footer-section p {
 	margin: 0;
-	font-size: 0.875rem; /* Assuming base font size is 16px */
+	font-size: 0.875rem;
 }
 
 .footer-section ul {
 	list-style: none;
-	font-size: 0.875rem; /* Assuming base font size is 16px */
+	font-size: 0.875rem;
 	padding: 0;
 	margin: 0;
 }
@@ -53,7 +53,7 @@ footer {
 
 .section-header {
 	white-space: nowrap;
-	font-size: 1rem; /* Assuming base font size is 16px */
+	font-size: 1rem;
 }
 
 .section-hr {
@@ -64,11 +64,11 @@ footer {
 }
 
 .section-header {
-	font-size: 1rem; /* Assuming base font size is 16px */
+	font-size: 1rem;
 }
 
 .cc {
-	font-size: 0.75rem; /* Assuming base font size is 16px */
+	font-size: 0.75rem;
 	color: #d8d8d8;
 }
 
@@ -83,9 +83,15 @@ footer {
 		display: none;
 	}
 	.footer-container {
-		flex-direction: column; /* Stack items vertically */
+		flex-direction: column;
 	}
 	.footer-section {
 		padding-bottom: 2rem;
+	}
+	.section-header {
+		font-size: 0.9rem;
+	}
+	.footer-section p {
+		font-size: 0.8rem;
 	}
 }

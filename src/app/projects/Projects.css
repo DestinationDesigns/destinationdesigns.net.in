@@ -6,6 +6,7 @@
 .selector-section h1 {
 	color: #01579b;
 	padding-left: 5rem;
+	font-size: 1.75rem;
 }
 .menu-selector {
 	display: flex;
@@ -53,4 +54,28 @@
 .image-container-grid:hover img {
 	transform: scale(1.1);
 	transition: 0.3s all ease-in-out;
+}
+@media (max-width: 768px) {
+	.selector-section {
+		padding-top: 3rem;
+	}
+	.selector-section h1 {
+		padding-left: 1rem;
+	}
+	.selector.class h3 {
+		padding: 0 10px 0 0;
+	}
+	.selector.type h3 {
+		padding: 0 10px 0 0;
+	}
+	.menu-selector {
+		padding: 0 1rem;
+		flex-direction: column;
+	}
+	.menu-selector h3 {
+		font-size: 0.9rem;
+	}
+	.image-grid {
+		grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
+	}
 }

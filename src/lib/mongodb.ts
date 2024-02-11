@@ -24,4 +24,9 @@ const connectMongoDB = async () => {
 	}
 };
 
-export default connectMongoDB;
+const dbInstance = async () => {
+	const client = await connectMongoDB();
+	return client.db("DestinationDesigns");
+};
+
+export default dbInstance;

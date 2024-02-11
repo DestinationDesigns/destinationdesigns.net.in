@@ -17,25 +17,25 @@
 h1 {
 	font-family: "Rubik", sans-serif;
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 1.5rempx;
 }
 
 h2 {
 	font-family: "Rubik", sans-serif;
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 1.25rempx;
 }
 
 h3 {
 	font-family: "Rubik", sans-serif;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1.125rempx;
 }
 
 body {
 	font-family: "Baloo 2", sans-serif;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1.125rempx;
 	margin: 0;
 }
 

@@ -12,6 +12,7 @@
 
 #careers-heading {
 	color: #01579b;
+	font-size: 0.9rem;
 }
 
 #career-paragraph {
@@ -26,12 +27,13 @@
 }
 .career-role h2 {
 	color: black;
+	font-size: 1.25rem;
 }
 
 .career-roles {
 	font-family: "Rubik", sans-serif;
 	font-weight: 500;
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	color: #505050;
 	margin-top: 2rem;
 }
@@ -96,4 +98,13 @@
 
 #form-dropdown {
 	opacity: 80%;
+}
+
+@media (max-width: 768px) {
+	.career-flex {
+		flex-direction: column;
+	}
+	.career-form {
+		width: 80vw;
+	}
 }

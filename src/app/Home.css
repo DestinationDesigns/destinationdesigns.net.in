@@ -74,3 +74,9 @@
 	align: left;
 	background-color: #ffffff;
 }
+
+@media (max-width: 768px) {
+	.expertise-container {
+		flex-direction: column;
+	}
+}
