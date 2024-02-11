@@ -12,16 +12,19 @@
 .expertise-container {
 	display: flex;
 	justify-content: center;
-}
-
-.expertise-img {
-	width: 20vw;
-	transition: filter 0.3s ease-in-out;
+	margin: 0;
 }
 
 .expertise-img-container {
 	position: relative;
 	overflow: hidden;
+	margin: 0 0.15rem;
+}
+.expertise-img {
+	width: 25rem;
+	height: 100%;
+	object-fit: cover;
+	transition: filter 0.3s ease-in-out;
 }
 
 .expertise-overlay {
@@ -35,6 +38,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 0;
 }
 
 .expertise-overlay h3 {
@@ -65,6 +69,8 @@
 
 .expertise-title h2 {
 	color: #01579b;
-	margin-bottom: 0.1rem;
+	margin-top: 3rem;
+	margin-bottom: 0.5rem;
+	align: left;
 	background-color: #ffffff;
 }

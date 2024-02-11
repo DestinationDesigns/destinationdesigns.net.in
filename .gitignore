@@ -3,7 +3,7 @@ node_modules
 target
 dist
 logs
-public
+public/admin
 .cache
 .vscode
 .DS_Store
