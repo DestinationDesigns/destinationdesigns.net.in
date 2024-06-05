@@ -63,7 +63,7 @@ function Footer() {
 				<p className="cc">&copy;2023 DESTINATIONDESIGNS.NET.IN</p>
 				<div className="social-logos">
 					<a
-						href="https://www.instagram.com/dojacat"
+						href="https://www.instagram.com/nnm7204"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
