@@ -4,7 +4,7 @@ import React from "react";
 import getBase64 from "@/lib/getbase64";
 import dbInstance from "@/lib/mongodb";
 
-import Slider from "@/components/Slider";
+//import Slider from "@/components/Slider";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 
@@ -75,7 +75,7 @@ async function Home() {
 							className="expertise-img"
 						/>
 						<div className="expertise-overlay">
-							<h3>ARCHITECTURE</h3>
+							<h3>ARCHITECTURE<br>+</h3>
 							<p className="overlay-desc">
 								We are passionate about responsible design and
 								the impact it has on the lives we touch every
@@ -90,7 +90,7 @@ async function Home() {
 							className="expertise-img"
 						/>
 						<div className="expertise-overlay">
-							<h3>INTERIOR DESIGN</h3>
+							<h3>INTERIOR DESIGN<br>+</h3>
 							<p className="overlay-desc">
 								We create functional interior design solutions
 								which address the needs & requirements of our
@@ -105,7 +105,7 @@ async function Home() {
 							className="expertise-img"
 						/>
 						<div className="expertise-overlay">
-							<h3>PLANNING</h3>
+							<h3>PLANNING<br>+</h3>
 							<p className="overlay-desc">
 								We are committed to delivering environmental and
 								socially sustainable communities with a strong
