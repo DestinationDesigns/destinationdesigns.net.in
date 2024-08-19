@@ -4,7 +4,7 @@ import React from "react";
 import getBase64 from "@/lib/getbase64";
 import dbInstance from "@/lib/mongodb";
 
-//import Slider from "@/components/Slider";
+import Slider from "@/components/Slider";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 
