@@ -48,7 +48,7 @@ function ImgContainer({ photo }) {
 
 function Projects({ data }) {
 	console.log('Received data:', data); // Check if we're getting data
-	const [selectedClass, setSelectedClass] = useState("Featured");
+	const [selectedClass, setSelectedClass] = useState("Interior");
 	const [selectedType, setSelectedType] = useState("All");
 
 	const classItems = [
