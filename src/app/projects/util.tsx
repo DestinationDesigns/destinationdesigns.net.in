@@ -47,6 +47,7 @@ function ImgContainer({ photo }) {
 }
 
 function Projects({ data }) {
+	console.log('Received data:', data); // Check if we're getting data
 	const [selectedClass, setSelectedClass] = useState("Architecture");
 	const [selectedType, setSelectedType] = useState("All");
 
@@ -96,6 +97,7 @@ function Projects({ data }) {
 		setSelectedType(typeKey);
 	};
 	const filteredData = data.filter((photo) => {
+		console.log('Processing photo:', photo); // Check each photo being processed
 		if (selectedClass === "Featured") {
 			return true; // Show all images when Featured is selected
 		}
@@ -104,6 +106,8 @@ function Projects({ data }) {
 			selectedType === "All" || photo.group === selectedType;
 		return classFilter && typeFilter;
 	}).slice(0, selectedClass === "Featured" ? 9 : undefined); // Limit to 9 images only for Featured
+
+	console.log('Filtered data:', filteredData); // Check the final filtered data
 
 	return (
 		<>

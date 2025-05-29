@@ -24,6 +24,7 @@ async function getData() {
 				images: { $slice: 1 },
 			})
 			.toArray();
+		console.log('MongoDB projects:', projects);
 		projects.forEach((project) => {
 			project._id = project._id.toString();
 		});
@@ -36,6 +37,7 @@ async function getData() {
 
 async function ProjectsPage() {
 	const data = await getData();
+	console.log('ProjectsPage data:', data);
 	if (data) {
 		const base64Promises = data.map((project: any) =>
 			getBase64(project.images[0]),
@@ -44,6 +46,7 @@ async function ProjectsPage() {
 		data.forEach((project: any, index: number) => {
 			project.images[1] = base64Result[index];
 		});
+		console.log('Processed data:', data);
 	}
 
 	return (
