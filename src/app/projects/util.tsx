@@ -96,13 +96,14 @@ function Projects({ data }) {
 		setSelectedType(typeKey);
 	};
 	const filteredData = data.filter((photo) => {
-		const classFilter = selectedClass === "Featured" 
-			? photo.featured === true 
-			: photo.class === selectedClass;
+		if (selectedClass === "Featured") {
+			return true; // Show all images when Featured is selected
+		}
+		const classFilter = photo.class === selectedClass;
 		const typeFilter =
 			selectedType === "All" || photo.group === selectedType;
 		return classFilter && typeFilter;
-	});
+	}).slice(0, selectedClass === "Featured" ? 9 : undefined); // Limit to 9 images only for Featured
 
 	return (
 		<>
