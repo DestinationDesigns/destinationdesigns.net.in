@@ -60,7 +60,7 @@ function Projects({ data }) {
 		{
 			key: "Architecture",
 			label: "Architecture",
-			isSelected: selectedClass === "rchitecture",
+			isSelected: selectedClass === "Architecture",
 		},
 		{
 			key: "Interior",
