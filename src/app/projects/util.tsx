@@ -96,8 +96,9 @@ function Projects({ data }) {
 		setSelectedType(typeKey);
 	};
 	const filteredData = data.filter((photo) => {
-		const classFilter =
-			photo.featured === true || photo.class === selectedClass;
+		const classFilter = selectedClass === "Featured" 
+			? photo.featured === true 
+			: photo.class === selectedClass;
 		const typeFilter =
 			selectedType === "All" || photo.group === selectedType;
 		return classFilter && typeFilter;
