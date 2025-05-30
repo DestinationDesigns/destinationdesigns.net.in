@@ -22,7 +22,7 @@ async function getData(projectID: string) {
 	}
 }
 
-async function ProjectPage({ params }: { params: { id: string } }) {
+async function ProjectPage({ params }: { params: { id: string } }) {           
 	const data = await getData(params.id);
 	if (data) {
 		const base64Promises = data.images.map((photo: any) =>

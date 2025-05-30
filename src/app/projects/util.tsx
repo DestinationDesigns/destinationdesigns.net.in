@@ -98,12 +98,23 @@ function Projects({ data }) {
 	};
 	const filteredData = data.filter((photo) => {
 		console.log('Processing photo:', photo); // Check each photo being processed
-		if (selectedClass === "Featured") {
-			return photo.class === "Featured"; // Only show images with Featured class
+		const currentClass = photo.class;
+		let classes: string[] = [];
+
+		if (Array.isArray(currentClass)) {
+			classes = currentClass;
+		} else if (typeof currentClass === 'string') {
+			classes = currentClass.split(',').map(item => item.trim()).filter(item => item !== '');
 		}
-		const classFilter = photo.class === selectedClass;
+
+		if (selectedClass === "Featured") {
+			return classes.includes("Featured");
+		}
+
+		const classFilter = classes.includes(selectedClass);
 		const typeFilter =
 			selectedType === "All" || photo.group === selectedType;
+
 		return classFilter && typeFilter;
 	}).slice(0, selectedClass === "Featured" ? 9 : undefined); // Limit to 9 images only for Featured
 
