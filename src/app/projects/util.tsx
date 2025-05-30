@@ -48,7 +48,7 @@ function ImgContainer({ photo }) {
 
 function Projects({ data }) {
 	console.log('Received data:', data); // Check if we're getting data
-	const [selectedClass, setSelectedClass] = useState("Featured");
+	const [selectedClass, setSelectedClass] = useState("Architecture");
 	const [selectedType, setSelectedType] = useState("All");
 
 	const classItems = [
@@ -99,7 +99,7 @@ function Projects({ data }) {
 	const filteredData = data.filter((photo) => {
 		console.log('Processing photo:', photo); // Check each photo being processed
 		if (selectedClass === "Featured") {
-			return true; // Show all images when Featured is selected
+			return photo.class === "Featured"; // Only show images with Featured class
 		}
 		const classFilter = photo.class === selectedClass;
 		const typeFilter =
