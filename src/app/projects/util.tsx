@@ -64,7 +64,7 @@ function Projects({ data }) {
 		},
 		{
 			key: "Interior",
-			label: "Interior",
+			label: "Interior Design",
 			isSelected: selectedClass === "Interior",
 		},
 		{
