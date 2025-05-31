@@ -33,8 +33,7 @@
 }
 .selector.class h3:hover {
 	text-decoration: none;
-	color: white;
-	background-color: rgba(220, 220, 220, 0.5);
+	color: #D8D8D8;
 	padding: 0 10px;
 }
 .selector.type h3 {
@@ -43,8 +42,7 @@
 }
 .selector.type h3:hover {
 	text-decoration: none;
-	color: white;
-	background-color: rgba(220, 220, 220, 0.5);
+	color: #D8D8D8;
 	padding: 0 10px;
 }
 
