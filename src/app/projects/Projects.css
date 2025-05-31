@@ -30,6 +30,7 @@
 .selector.class h3 {
 	padding: 0 40px 0 0;
 	cursor: pointer;
+	font-size: 0.8rem;
 }
 .selector.class h3:not(.selected):hover {
 	text-decoration: none;
@@ -38,6 +39,7 @@
 .selector.type h3 {
 	padding: 0 0 0 40px;
 	cursor: pointer;
+	font-size: 0.8rem;
 }
 .selector.type h3:not(.selected):hover {
 	text-decoration: none;
@@ -69,6 +71,7 @@
 
 .selector h3:not(.selected) {
 	font-weight: 400;
+	color: #a0a0a0;
 }
 
 @media (max-width: 768px) {
