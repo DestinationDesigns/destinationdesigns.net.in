@@ -28,16 +28,15 @@
 }
 
 .selector.class h3 {
-	padding: 0 40px 0 0;
+	padding: 0 10px 0 0;
 	cursor: pointer;
-	font-size: 0.8rem;
 }
 .selector.class h3:not(.selected):hover {
 	text-decoration: none;
 	color: #D8D8D8;
 }
 .selector.type h3 {
-	padding: 0 0 0 40px;
+	padding: 0 0 0 10px;
 	cursor: pointer;
 	font-size: 0.8rem;
 }
@@ -69,7 +68,12 @@
 	transition: 0.3s all ease-in-out;
 }
 
-.selector h3:not(.selected) {
+.selector.class h3:not(.selected) {
+	font-weight: 400;
+	color: #000;
+}
+
+.selector.type h3:not(.selected) {
 	font-weight: 400;
 	color: #a0a0a0;
 }
