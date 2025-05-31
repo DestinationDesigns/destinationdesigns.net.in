@@ -28,22 +28,20 @@
 }
 
 .selector.class h3 {
-	padding: 0 10px 0 0;
+	padding: 0 20px 0 0;
 	cursor: pointer;
 }
-.selector.class h3:hover {
+.selector.class h3:not(.selected):hover {
 	text-decoration: none;
 	color: #D8D8D8;
-	padding: 0 10px;
 }
 .selector.type h3 {
-	padding: 0 0 0 10px;
+	padding: 0 0 0 20px;
 	cursor: pointer;
 }
-.selector.type h3:hover {
+.selector.type h3:not(.selected):hover {
 	text-decoration: none;
 	color: #D8D8D8;
-	padding: 0 10px;
 }
 
 .selected {
@@ -68,6 +66,11 @@
 	transform: scale(1.1);
 	transition: 0.3s all ease-in-out;
 }
+
+.selector h3:not(.selected) {
+	font-weight: 400;
+}
+
 @media (max-width: 768px) {
 	.selector-section {
 		padding-top: 3rem;
