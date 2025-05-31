@@ -28,7 +28,7 @@
 }
 
 .selector.class h3 {
-	padding: 0 10px 0 0;
+	padding: 0 20px 0 0;
 	cursor: pointer;
 }
 .selector.class h3:not(.selected):hover {
@@ -36,7 +36,7 @@
 	color: #D8D8D8;
 }
 .selector.type h3 {
-	padding: 0 0 0 10px;
+	padding: 0 0 0 20px;
 	cursor: pointer;
 	font-size: 0.8rem;
 }
