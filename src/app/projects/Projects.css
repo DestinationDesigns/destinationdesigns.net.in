@@ -12,6 +12,7 @@
 	display: flex;
 	padding: 0 5rem;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 .image-grid {
 	display: grid;
@@ -46,8 +47,8 @@
 }
 
 .selected {
-	font-weight: 500;
-	color: #01579b;
+	font-weight: 700;
+	color: #000;
 }
 .image-container-grid {
 	position: relative;
