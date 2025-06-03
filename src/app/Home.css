@@ -18,9 +18,10 @@
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
-	max-width: 100rem;
-	gap: 0.5rem;
+	max-width: 120rem;
+	gap: 1rem;
 	padding: 0 1rem;
+	flex-wrap: wrap;
 }
 
 .expertise-img-container {
@@ -28,10 +29,12 @@
 	overflow: hidden;
 	margin: 0;
 	height: auto;
-	width: 100%;
-	flex-basis: 0;
+	width: calc(33.333% - 1rem);
+	min-width: 200px;
+	flex-basis: auto;
 	flex-grow: 1;
 	box-sizing: border-box;
+	margin-bottom: 1rem;
 }
 .expertise-img {
 	width: 100%;
@@ -121,11 +124,16 @@
 @media (max-width: 768px) {
 	.expertise-container {
 		flex-wrap: wrap;
+		max-width: 100%;
+		padding: 0 0.5rem;
+		gap: 0.5rem;
 	}
 	.expertise-img-container {
-		margin: 0.25rem;
+		margin: 0;
 		overflow: hidden;
-		width: 100%;
+		width: calc(50% - 0.25rem);
+		min-width: 150px;
+		margin-bottom: 0.5rem;
 	}
 	.expertise-img {
 		width: 100%;
