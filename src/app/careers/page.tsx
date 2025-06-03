@@ -47,6 +47,22 @@ function Careers() {
 		}
 	};
 
+	const handleRemoveFile = (type: 'resume' | 'portfolio') => {
+		setFormData(prev => ({
+			...prev,
+			[type]: null
+		}));
+		if (type === 'resume') {
+			setResumeFileName("");
+			const resumeInput = document.getElementById('resume-upload') as HTMLInputElement;
+			if (resumeInput) resumeInput.value = "";
+		} else if (type === 'portfolio') {
+			setPortfolioFileName("");
+			const portfolioInput = document.getElementById('portfolio-upload') as HTMLInputElement;
+			if (portfolioInput) portfolioInput.value = "";
+		}
+	};
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setIsSubmitting(true);
@@ -234,7 +250,17 @@ function Careers() {
 											value="Choose a file..."
 											onClick={() => handleFileButtonClick("resume-upload")}
 										/>
-										{resumeFileName && <span style={{ marginLeft: '10px' }}>{resumeFileName}</span>}
+										{resumeFileName && (
+											<span style={{ marginLeft: '10px' }}>
+												{resumeFileName}
+												<button
+													style={{ marginLeft: '5px', cursor: 'pointer' }}
+													onClick={() => handleRemoveFile('resume')}
+												>
+													X
+												</button>
+											</span>
+										)}
 									</div>
 									<div className="attach-button">
 										Attach your Portfolio
@@ -252,7 +278,17 @@ function Careers() {
 											value="Choose a file..."
 											onClick={() => handleFileButtonClick("portfolio-upload")}
 										/>
-										{portfolioFileName && <span style={{ marginLeft: '10px' }}>{portfolioFileName}</span>}
+										{portfolioFileName && (
+											<span style={{ marginLeft: '10px' }}>
+												{portfolioFileName}
+												<button
+													style={{ marginLeft: '5px', cursor: 'pointer' }}
+													onClick={() => handleRemoveFile('portfolio')}
+												>
+													X
+												</button>
+											</span>
+										)}
 									</div>
 								</div>
 								<button
