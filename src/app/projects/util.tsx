@@ -47,7 +47,8 @@ function ImgContainer({ photo }) {
 }
 
 function Projects({ data }) {
-	const [selectedClass, setSelectedClass] = useState("Architecture");
+	console.log('Received data:', data); // Check if we're getting data
+	const [selectedClass, setSelectedClass] = useState("Featured");
 	const [selectedType, setSelectedType] = useState("All");
 
 	const classItems = [
@@ -63,7 +64,7 @@ function Projects({ data }) {
 		},
 		{
 			key: "Interior",
-			label: "Interior",
+			label: "Interior Designs",
 			isSelected: selectedClass === "Interior",
 		},
 		{
@@ -96,12 +97,28 @@ function Projects({ data }) {
 		setSelectedType(typeKey);
 	};
 	const filteredData = data.filter((photo) => {
-		const classFilter =
-			photo.featured === true || photo.class === selectedClass;
+		console.log('Processing photo:', photo); // Check each photo being processed
+		const currentClass = photo.class;
+		let classes: string[] = [];
+
+		if (Array.isArray(currentClass)) {
+			classes = currentClass;
+		} else if (typeof currentClass === 'string') {
+			classes = currentClass.split(',').map(item => item.trim()).filter(item => item !== '');
+		}
+
+		if (selectedClass === "Featured") {
+			return classes.includes("Featured");
+		}
+
+		const classFilter = classes.includes(selectedClass);
 		const typeFilter =
 			selectedType === "All" || photo.group === selectedType;
+
 		return classFilter && typeFilter;
-	});
+	}).slice(0, selectedClass === "Featured" ? 9 : undefined); // Limit to 9 images only for Featured
+
+	console.log('Filtered data:', filteredData); // Check the final filtered data
 
 	return (
 		<>

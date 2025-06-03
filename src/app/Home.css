@@ -10,6 +10,10 @@
 }
 .caption {
 	font-size: 1.25rem;
+	color: #505050;
+	font-weight: 500;
+
+
 }
 
 .expertise-container {
@@ -22,6 +26,8 @@
 	position: relative;
 	overflow: hidden;
 	margin: 0 0.15rem;
+	height: 75%;
+	width: 75%;
 }
 .expertise-img {
 	width: 25rem;

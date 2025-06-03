@@ -1,6 +1,7 @@
 .selector-section {
 	background: white;
 	padding-top: 5rem;
+	padding-bottom: 2px;
 	color: black;
 }
 .selector-section h1 {
@@ -12,6 +13,7 @@
 	display: flex;
 	padding: 0 5rem;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 .image-grid {
 	display: grid;
@@ -21,6 +23,7 @@
 	height: auto;
 	width: 100%;
 	background: white;
+	margin-bottom: 2px;
 }
 .selector {
 	display: flex;
@@ -28,15 +31,26 @@
 }
 
 .selector.class h3 {
-	padding: 0 10px 0 0;
+	padding: 0 20px 0 0;
+	cursor: pointer;
+}
+.selector.class h3:not(.selected):hover {
+	text-decoration: none;
+	color: #D8D8D8;
 }
 .selector.type h3 {
-	padding: 0 0 0 10px;
+	padding: 0 0 0 20px;
+	cursor: pointer;
+	font-size: 0.8rem;
+}
+.selector.type h3:not(.selected):hover {
+	text-decoration: none;
+	color: #D8D8D8;
 }
 
 .selected {
-	font-weight: 500;
-	color: #01579b;
+	font-weight: 700;
+	color: #000;
 }
 .image-container-grid {
 	position: relative;
@@ -56,6 +70,17 @@
 	transform: scale(1.1);
 	transition: 0.3s all ease-in-out;
 }
+
+.selector.class h3:not(.selected) {
+	font-weight: 400;
+	color: #000;
+}
+
+.selector.type h3:not(.selected) {
+	font-weight: 400;
+	color: #a0a0a0;
+}
+
 @media (max-width: 768px) {
 	.selector-section {
 		padding-top: 3rem;

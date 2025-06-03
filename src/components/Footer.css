@@ -25,19 +25,24 @@ footer {
 
 .footer-section p {
 	margin: 0;
-	font-size: 0.875rem;
+	font-size: 0.800rem;
+	color: #D8D8D8;
+	;
 }
 
 .footer-section ul {
 	list-style: none;
-	font-size: 0.875rem;
+	font-size: 0.800rem;
 	padding: 0;
 	margin: 0;
+	color: #D8D8D8;
+	;
 }
 
 .footer-section a {
-	color: white;
+	color: #D8D8D8;
 	text-decoration: none;
+
 }
 
 .mainlogo {
