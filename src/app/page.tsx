@@ -64,62 +64,64 @@ async function Home() {
 					<br />
 					skillful execution in search of Excellence...
 				</span>
-				<div className="expertise-title">
-					<h2>Expertise</h2>
-				</div>
-				<div className="expertise-container">
-					<div className="expertise-img-container">
-						<Image
-							src={arch_exp}
-							alt=""
-							className="expertise-img"
-						/>
-						<div className="expertise-overlay">
-							<h3>
-								ARCHITECTURE
-								<br />+
-							</h3>
-							<p className="overlay-desc">
-								We are passionate about responsible design and
-								the impact it has on the lives we touch every
-								day.
-							</p>
-						</div>
+				<div className="expertise-section-container">
+					<div className="expertise-title">
+						<h2>Expertise</h2>
 					</div>
-					<div className="expertise-img-container">
-						<Image
-							src={intr_exp}
-							alt=""
-							className="expertise-img"
-						/>
-						<div className="expertise-overlay">
-							<h3>
-								INTERIOR DESIGN
-								<br />+
-							</h3>
-							<p className="overlay-desc">
-								We create functional interior design solutions
-								which address the needs & requirements of our
-								client.
-							</p>
+					<div className="expertise-container">
+						<div className="expertise-img-container">
+							<Image
+								src={arch_exp}
+								alt=""
+								className="expertise-img"
+							/>
+							<div className="expertise-overlay">
+								<h3>
+									ARCHITECTURE
+									<br />+
+								</h3>
+								<p className="overlay-desc">
+									We are passionate about responsible design and
+									the impact it has on the lives we touch every
+									day.
+								</p>
+							</div>
 						</div>
-					</div>
-					<div className="expertise-img-container">
-						<Image
-							src={plng_exp}
-							alt=""
-							className="expertise-img"
-						/>
-						<div className="expertise-overlay">
-							<h3>
-								PLANNING
-								<br />+
-							</h3>
-							<p className="overlay-desc">
-								We are committed to delivering environmental and
-								socially sustainable communities with a strong
-								sense of design value on an urban level.
-							</p>
+						<div className="expertise-img-container">
+							<Image
+								src={intr_exp}
+								alt=""
+								className="expertise-img"
+							/>
+							<div className="expertise-overlay">
+								<h3>
+									INTERIOR DESIGN
+									<br />+
+								</h3>
+								<p className="overlay-desc">
+									We create functional interior design solutions
+									which address the needs & requirements of our
+									client.
+								</p>
+							</div>
+						</div>
+						<div className="expertise-img-container">
+							<Image
+								src={plng_exp}
+								alt=""
+								className="expertise-img"
+							/>
+							<div className="expertise-overlay">
+								<h3>
+									PLANNING
+									<br />+
+								</h3>
+								<p className="overlay-desc">
+									We are committed to delivering environmental and
+									socially sustainable communities with a strong
+									sense of design value on an urban level.
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
