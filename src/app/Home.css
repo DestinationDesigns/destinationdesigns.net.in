@@ -52,6 +52,9 @@
 	justify-content: center;
 	align-items: center;
 	margin: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .expertise-overlay h3 {
@@ -59,17 +62,25 @@
 	margin: 0;
 	opacity: 1;
 	transition: opacity 0.3s;
+	z-index: 1;
+}
+
+.expertise-img-container:hover .expertise-overlay {
+	opacity: 1;
 }
 
 .expertise-img-container:hover .overlay-desc {
 	opacity: 1;
+	z-index: 1;
 }
+
 .expertise-img-container:hover .expertise-overlay h3 {
 	opacity: 0;
 }
 
 .expertise-img-container:hover .expertise-img {
-	filter: blur(5px);
+	/* Remove or adjust blur if desired */
+	/* filter: blur(5px); */
 }
 
 .overlay-desc {
