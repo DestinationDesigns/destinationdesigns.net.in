@@ -4,6 +4,7 @@ import Projects from "./util";
 
 import getBase64 from "@/lib/getbase64";
 import dbInstance from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
 
 async function getData() {
 	try {
@@ -51,7 +52,9 @@ async function ProjectsPage() {
 
 	return (
 		<>
-			<Projects data={data} />
+			<div style={{ backgroundColor: 'white' }}>
+				<Projects data={data} />
+			</div>
 			<Header dark={true} />
 			<Navbar dark={true} />
 		</>
