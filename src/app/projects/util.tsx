@@ -130,11 +130,13 @@ function Projects({ data }) {
 						items={classItems}
 						onSelect={handleClassChange}
 					/>
-					<Menu
-						className="selector type"
-						items={typeItems}
-						onSelect={handleTypeChange}
-					/>
+					{selectedClass !== "Featured" && (
+						<Menu
+							className="selector type"
+							items={typeItems}
+							onSelect={handleTypeChange}
+						/>
+					)}
 				</div>
 			</div>
 

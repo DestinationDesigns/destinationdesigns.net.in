@@ -92,7 +92,13 @@
 	border: 0px;
 	font-family: "Rubik", sans-serif;
 	font-size: 0.9rem;
+	cursor: pointer;
 }
+
+#submit-button:hover {
+	background-color: #0288d1;
+}
+
 .map {
 	width: 100vw;
 	/* height: 400px; */
