@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 import getBase64 from "@/lib/getbase64";
@@ -68,7 +69,7 @@ async function Home() {
 					<h2>Expertise</h2>
 				</div>
 				<div className="expertise-container">
-					<div className="expertise-img-container">
+					<Link href="/projects?type=architecture" className="expertise-img-container">
 						<Image
 							src={arch_exp}
 							alt=""
@@ -80,13 +81,15 @@ async function Home() {
 								<br />+
 							</h3>
 							<p className="overlay-desc">
+							<span className="overlay-title">ARCHITECTURE</span>
+  								<br />
 								We are passionate about responsible design and
 								the impact it has on the lives we touch every
 								day.
 							</p>
 						</div>
-					</div>
-					<div className="expertise-img-container">
+					</Link>
+					<Link href="/projects?type=interior" className="expertise-img-container">
 						<Image
 							src={intr_exp}
 							alt=""
@@ -98,13 +101,15 @@ async function Home() {
 								<br />+
 							</h3>
 							<p className="overlay-desc">
+							<span className="overlay-title">INTERIOR DESIGN</span>
+							<br />
 								We create functional interior design solutions
 								which address the needs & requirements of our
 								client.
 							</p>
 						</div>
-					</div>
-					<div className="expertise-img-container">
+					</Link>
+					<Link href="/projects?type=planning" className="expertise-img-container">
 						<Image
 							src={plng_exp}
 							alt=""
@@ -116,12 +121,14 @@ async function Home() {
 								<br />+
 							</h3>
 							<p className="overlay-desc">
+							<span className="overlay-title">PLANNING</span>
+							<br />
 								We are committed to delivering environmental and
 								socially sustainable communities with a strong
 								sense of design value on an urban level.
 							</p>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</div>
 			<Header dark={false} />

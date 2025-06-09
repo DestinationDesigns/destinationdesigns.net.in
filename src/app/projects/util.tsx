@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import Loader from "@/lib/loader";
 import "./Projects.css";
 
@@ -47,8 +48,16 @@ function ImgContainer({ photo }) {
 }
 
 function Projects({ data }) {
-	console.log('Received data:', data); // Check if we're getting data
-	const [selectedClass, setSelectedClass] = useState("Featured");
+	console.log('Received data:', data);
+	const searchParams = useSearchParams();
+	const typeParam = searchParams.get('type');
+	
+	const [selectedClass, setSelectedClass] = useState(() => {
+		if (typeParam === 'architecture') return "Architecture";
+		if (typeParam === 'interior') return "Interior";
+		if (typeParam === 'planning') return "Master Planning";
+		return "Featured";
+	});
 	const [selectedType, setSelectedType] = useState("All");
 
 	const classItems = [
