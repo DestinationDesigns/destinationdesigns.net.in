@@ -105,7 +105,7 @@ async function Home() {
 							<br />
 								We create functional interior design solutions
 								which address the needs & requirements of our
-								client.
+								client
 							</p>
 						</div>
 					</Link>
