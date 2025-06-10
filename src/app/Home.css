@@ -26,7 +26,10 @@
 
 .expertise-img-container {
 	position: relative;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
+	cursor: pointer;
 	margin: 0;
 	height: auto;
 	width: calc(33.333% - 0.75rem);
@@ -40,7 +43,7 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: filter 0.3s ease-in-out;
+	transition: filter 0.3s ease;
 }
 
 .expertise-overlay {
@@ -64,13 +67,17 @@
 	font-weight: bold;
 	font-size: 1.2rem; /* adjust as needed */
 	display: block; /* optional, to ensure it stays on its own line */
+	
   }
   
 
+.expertise-img-container:hover .expertise-img {
+	filter: blur(4px);
+}
+
 .expertise-img-container:hover .expertise-overlay {
-	background-color: rgba(30, 78, 121, 0.8);
-
-
+	background-color: rgba(30, 78, 110, 0.8);
+	
 }
 
 .expertise-overlay h3 {
@@ -124,11 +131,6 @@
 .expertise-img-container:hover .overlay-desc {
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
-}
-
-.expertise-img-container:hover .expertise-img {
-	/* Keep or remove blur effect on image hover */
-	/* filter: blur(5px); */
 }
 
 .expertise-title {
