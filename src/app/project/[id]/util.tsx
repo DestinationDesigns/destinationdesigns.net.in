@@ -2,10 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Loader from "@/lib/loader";
+import { useSearchParams } from "next/navigation";
 
 import "./Project.css";
 
 function Project({ data }) {
+	const searchParams = useSearchParams();
+	const typeParam = searchParams.get('type');
+	const backHref = typeParam ? `/projects?type=${typeParam}` : '/projects';
 	return (
 		<>
 			<div className="image-grid-v">
@@ -54,7 +58,7 @@ function Project({ data }) {
 					<h3>{data.status}</h3>
 				</div>
 				<div className="redirect-section">
-					<Link href="/projects">BACK TO PROJECTS</Link>
+					<Link href={backHref}>BACK TO PROJECTS</Link>
 				</div>
 			</div>
 		</>

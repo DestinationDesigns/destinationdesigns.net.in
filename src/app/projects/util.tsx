@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Loader from "@/lib/loader";
 import "./Projects.css";
 
@@ -29,10 +29,17 @@ function Menu({ items, onSelect, className }) {
 	);
 }
 
-function ImgContainer({ photo }) {
+function ImgContainer({ photo, selectedClass }) {
+	// Map selectedClass to type param for URL
+	let typeParam = '';
+	if (selectedClass === 'Architecture') typeParam = 'architecture';
+	else if (selectedClass === 'Interior') typeParam = 'interior';
+	else if (selectedClass === 'Master Planning') typeParam = 'planning';
+	// Featured tab does not need a type param
+	const href = typeParam ? `/project/${photo._id}?type=${typeParam}` : `/project/${photo._id}`;
 	return (
 		<div className="image-container-grid">
-			<Link href={`/project/${photo._id}`}>
+			<Link href={href}>
 				<Image
 					loader={Loader}
 					src={photo.images[0]}
@@ -50,6 +57,7 @@ function ImgContainer({ photo }) {
 function Projects({ data }) {
 	console.log('Received data:', data);
 	const searchParams = useSearchParams();
+	const router = useRouter();
 	const typeParam = searchParams.get('type');
 	
 	const [selectedClass, setSelectedClass] = useState(() => {
@@ -97,9 +105,20 @@ function Projects({ data }) {
 		},
 	];
 
+	const updateUrl = (classKey) => {
+		let type = '';
+		if (classKey === 'Architecture') type = 'architecture';
+		else if (classKey === 'Interior') type = 'interior';
+		else if (classKey === 'Master Planning') type = 'planning';
+		// Featured tab: remove type param
+		const url = type ? `/projects?type=${type}` : '/projects';
+		router.push(url);
+	};
+
 	const handleClassChange = (classKey) => {
 		setSelectedClass(classKey);
 		setSelectedType("All");
+		updateUrl(classKey);
 	};
 
 	const handleTypeChange = (typeKey) => {
@@ -151,7 +170,7 @@ function Projects({ data }) {
 
 			<div className="image-grid">
 				{filteredData.map((photo) => (
-					<ImgContainer key={photo._id} photo={photo} />
+					<ImgContainer key={photo._id} photo={photo} selectedClass={selectedClass} />
 				))}
 			</div>
 		</>
