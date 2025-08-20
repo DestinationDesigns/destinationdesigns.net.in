@@ -56,7 +56,7 @@ function Slider({ data }) {
 								alt="slides"
 							/>
 						</Link>
-						<h1>{slide.name}</h1>
+						
 					</div>
 				);
 			})}
